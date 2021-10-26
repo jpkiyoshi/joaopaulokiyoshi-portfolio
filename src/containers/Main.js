@@ -17,7 +17,6 @@ import Profile from "./profile/Profile";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
-import {useTranslation} from "react-i18next";
 // const lngs = {
 //   pt: {nativeName: "Português"},
 //   en: {nativeName: "English"}
@@ -26,7 +25,6 @@ import {useTranslation} from "react-i18next";
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
   const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
-  const {i18n} = useTranslation();
 
   const changeTheme = () => {
     setIsDark(!isDark);
