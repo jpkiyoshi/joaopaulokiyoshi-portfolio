@@ -1,5 +1,3 @@
-// To change portfolio colors globally go to the  _globalColor.scss file
-
 import emoji from "react-easy-emoji";
 
 // Summary And Greeting Section
@@ -82,22 +80,20 @@ https://fontawesome.com/icons?d=gallery */
 
 const educationInfo = {
   display: true,
-  schools: [
-    {
-      schoolName: "UniCEUB - Centro Universitário de Brasília",
-      logo: require("./assets/images/ceub.png"),
-      subHeader: "Análise e Desenvolvimento de Sistemas",
-      duration: "2015 - 2018",
-      desc: "Graduação concluída com SS (nota máxima) no Projeto Final.",
-      descBullets: [
-        "Aprendizado sobre programação orientada a objetos, utilizando Java",
-        "Aprenidzado sobre User Experience e User Interface",
-        "Aprendizado sobre metodologias ágeis",
-        "Aprendizado sobre análise de negócio e análise de requisitos",
-        "Aprendizado sobre banco de dados"
-      ]
-    }
-  ]
+  school: {
+    schoolName: "UniCEUB - Centro Universitário de Brasília",
+    logo: require("./assets/images/ceub.png"),
+    subHeader: "Análise e Desenvolvimento de Sistemas",
+    duration: "2015 - 2018",
+    desc: "Graduação concluída com SS (nota máxima) no Projeto Final.",
+    descBullets: [
+      "Aprendizado sobre programação orientada a objetos, utilizando Java",
+      "Aprendizado sobre User Experience e User Interface",
+      "Aprendizado sobre metodologias ágeis",
+      "Aprendizado sobre análise de negócio e análise de requisitos",
+      "Aprendizado sobre banco de dados"
+    ]
+  }
 };
 
 // Tech Stack x

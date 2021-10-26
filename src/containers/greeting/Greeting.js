@@ -6,12 +6,14 @@ import landingPerson from "../../assets/lottie/landingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
+import {useTranslation} from "react-i18next";
 
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
+  const {t} = useTranslation();
   if (!greeting.displayGreeting) {
     return null;
   }
@@ -25,7 +27,7 @@ export default function Greeting() {
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
                 {" "}
-                {greeting.title}{" "}
+                {t("greetings.title")}{" "}
                 <span className="wave-emoji">{emoji("🎌")}</span>
               </h1>
               <p
@@ -35,11 +37,11 @@ export default function Greeting() {
                     : "greeting-text-p subTitle"
                 }
               >
-                {greeting.subTitle}
+                {t("greetings.subTitle")}
               </p>
               <SocialMedia />
               <div className="button-greeting-div">
-                <Button text="Meus Projetos" href="#projects" />
+                <Button text={t("greetings.projects")} href="#projects" />
                 {greeting.resumeLink && (
                   <Button
                     text="See my resume"

@@ -12,6 +12,12 @@ import {
   talkSection,
   achievementSection
 } from "../../portfolio";
+import {useTranslation} from "react-i18next";
+import i18n from "i18next";
+const lngs = {
+  pt: {nativeName: "Português"},
+  en: {nativeName: "English"}
+};
 
 function Header() {
   const {isDark} = useContext(StyleContext);
@@ -21,6 +27,7 @@ function Header() {
   const viewAchievement = achievementSection.display;
   const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
+  const {t} = useTranslation();
 
   return (
     <Headroom>
@@ -41,20 +48,20 @@ function Header() {
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
-              <a href="#skills">Tecnologias</a>
+              <a href="#skills">{t("header.skills")}</a>
             </li>
           )}
           <li>
-            <a href="#projects">Projetos</a>
+            <a href="#projects">{t("header.projects")}</a>
           </li>
           {viewExperience && (
             <li>
-              <a href="#experience">Experiência</a>
+              <a href="#experience">{t("header.experience")}</a>
             </li>
           )}
           {viewOpenSource && (
             <li>
-              <a href="#opensource">Repositórios</a>
+              <a href="#opensource">{t("header.openSource")}</a>
             </li>
           )}
           {viewAchievement && (
@@ -73,7 +80,32 @@ function Header() {
             </li>
           )}
           <li>
-            <a href="#contact">Contato</a>
+            <a href="#contact">{t("header.contact")}</a>
+          </li>
+          <li>
+            <div>
+              {Object.keys(lngs).map(lng => (
+                <button
+                  key={lng}
+                  style={{
+                    fontWeight:
+                      i18n.resolvedLanguage === lng ? "bold" : "normal",
+                    fontSize: i18n.resolvedLanguage === lng && "1rem",
+                    backgroundColor: "#0096c7",
+                    color: "#fff",
+                    border: "none",
+                    padding: "0.5rem",
+                    margin: "0.5rem",
+                    cursor: "pointer",
+                    borderRadius: "50px"
+                  }}
+                  type="submit"
+                  onClick={() => i18n.changeLanguage(lng)}
+                >
+                  {lngs[lng].nativeName}
+                </button>
+              ))}
+            </div>
           </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

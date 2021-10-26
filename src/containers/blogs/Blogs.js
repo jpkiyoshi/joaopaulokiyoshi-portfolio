@@ -4,8 +4,10 @@ import BlogCard from "../../components/blogCard/BlogCard";
 import {blogSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import {useTranslation} from "react-i18next";
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
+  const {t} = useTranslation();
   if (!blogSection.display) {
     return null;
   }
@@ -19,7 +21,7 @@ export default function Blogs() {
               isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle"
             }
           >
-            {blogSection.subtitle}
+            {t("blogSection")}
           </p>
         </div>
         <div className="blog-main-div">

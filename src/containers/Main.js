@@ -17,10 +17,16 @@ import Profile from "./profile/Profile";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
+import {useTranslation} from "react-i18next";
+// const lngs = {
+//   pt: {nativeName: "Português"},
+//   en: {nativeName: "English"}
+// };
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
   const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+  const {i18n} = useTranslation();
 
   const changeTheme = () => {
     setIsDark(!isDark);
@@ -30,6 +36,20 @@ const Main = () => {
     <div className={isDark ? "dark-mode" : null}>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
         <Header />
+        {/* <div>
+            {Object.keys(lngs).map(lng => (
+              <button
+                key={lng}
+                style={{
+                  fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal"
+                }}
+                type="submit"
+                onClick={() => i18n.changeLanguage(lng)}
+              >
+                {lngs[lng].nativeName}
+              </button>
+            ))}
+          </div> */}
         <Greeting />
         <Skills />
         <StackProgress />
