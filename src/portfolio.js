@@ -85,7 +85,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "UniCEUB - Centro Universitário de Brasília",
-      logo: require("./assets/images/ceub.jpg"),
+      logo: require("./assets/images/ceub.png"),
       subHeader: "Análise e Desenvolvimento de Sistemas",
       duration: "2015 - 2018",
       desc: "Graduação concluída com SS (nota máxima) no Projeto Final.",
