@@ -30,6 +30,7 @@ export default function StartupProject() {
                 ? "dark-mode project-subtitle"
                 : "subTitle project-subtitle"
             }
+            style={{marginBottom: "2rem"}}
           >
             {t("bigProjects.subTitle")}
           </p>
