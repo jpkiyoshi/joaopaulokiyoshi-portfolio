@@ -176,9 +176,9 @@ const bigProjects = {
     },
     {
       image: require("./assets/images/meuportfolio.png"),
-      projectName: "Portifólio",
+      projectName: "Portfólio",
       projectDesc:
-        "Primeira versão do meu Portifólio, desenvolvido com HTML, CSS, JavaScript e SASS",
+        "Primeira versão do meu Portfólio, desenvolvido com HTML, CSS, JavaScript e SASS",
       footerLink: [
         {
           name: "Visitar",
