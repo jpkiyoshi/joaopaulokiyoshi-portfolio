@@ -57,7 +57,7 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-sass"
     },
     {
-      skillName: "React",
+      skillName: "React / Next",
       fontAwesomeClassname: "fab fa-react"
     },
     {
@@ -156,8 +156,8 @@ const bigProjects = {
         "E-commerce em desenvolvimento, utilizando Next.js como framework principal",
       footerLink: [
         {
-          name: "Em Desenvolvimento",
-          url: ""
+          name: "Visitar",
+          url: "https://contasdefadas-nextjs.vercel.app/"
         }
       ]
     },
