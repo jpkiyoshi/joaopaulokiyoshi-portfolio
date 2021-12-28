@@ -157,7 +157,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visitar",
-          url: "https://contasdefadas-nextjs.vercel.app/"
+          url: "https://contasdefadas.com.br/"
         }
       ]
     },
