@@ -153,11 +153,23 @@ const bigProjects = {
       image: require("./assets/images/contas-de-fadas.png"),
       projectName: "Contas de Fadas",
       projectDesc:
-        "E-commerce em desenvolvimento, utilizando Next.js como framework principal",
+        "E-commerce desenvolvido utilizando Next.js e Sanity.io, em parceria com o desenvolvedor Jamil Derzi",
       footerLink: [
         {
           name: "Visitar",
           url: "https://contasdefadas.com.br/"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/adivinhe-o-numero.png"),
+      projectName: "Adivinhe o Número",
+      projectDesc:
+        "Jogo de adivinhação desenvolvido completamento do zero, utilizando apenas HTML, CSS e JavaScript.",
+      footerLink: [
+        {
+          name: "Visitar",
+          url: "https://guessthenumber-jp.netlify.app/"
         }
       ]
     },
