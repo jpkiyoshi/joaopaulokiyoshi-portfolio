@@ -88,16 +88,19 @@ function Header() {
                 <button
                   key={lng}
                   style={{
-                    fontWeight:
-                      i18n.resolvedLanguage === lng ? "bold" : "normal",
-                    fontSize: i18n.resolvedLanguage === lng && "1rem",
-                    backgroundColor: "#0096c7",
+                    transform:
+                      i18n.language === lng ? "scale(1.1)" : "scale(1)",
+                    boxShadow:
+                      i18n.resolvedLanguage === lng &&
+                      "2px 2px 2px 1px rgba(0, 0, 0, 0.2)",
+                    fontSize: ".9rem",
+                    backgroundColor:
+                      i18n.resolvedLanguage === lng ? "#00274F" : "#0096c7",
                     color: "#fff",
                     border: "none",
-                    padding: "0.5rem",
+                    padding: "0.5rem 1rem",
                     margin: "0.5rem",
-                    cursor: "pointer",
-                    borderRadius: "50px"
+                    cursor: "pointer"
                   }}
                   type="submit"
                   onClick={() => i18n.changeLanguage(lng)}
