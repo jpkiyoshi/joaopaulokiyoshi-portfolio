@@ -181,7 +181,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visitar",
-          url: "https://bonitaaoquadrado.link/"
+          url: "https://bonitaaoquadrado.netlify.app/"
         }
         //  you can add extra buttons here.
       ]
